@@ -36,19 +36,19 @@ const generateSVG = () => {
   .then((res) => {
     console.log(res);
 
-    let logoShape;
+    let svgShape;
 
     //if the response is circle import circle parameter from shapes.js
     if (res.shape === "Circle") {
-        logoShape = new Circle();
+        svgShape = new Circle();
     }
     // if the response is triangle import triangle parameter from shapes.js
     if (res.shape === "Triangle") {
-        logoShape = new Triangle();
+        svgShape = new Triangle();
     }
     // if the response is square import square parameter from shapes.js
     if (res.shape === "Square") {
-        logoShape = new Square();
+        svgShape = new Square();
     }
     // allow user to pick color
     svgShape.setColor(res.shapeColor)
